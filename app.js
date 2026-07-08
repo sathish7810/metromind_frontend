@@ -4,7 +4,7 @@
  * dynamic navigation builder, and custom toast notification system.
  */
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://metromind-backend.onrender.com";
 
 // Standard Toast Alert System
 function showToast(message, type = "success") {
