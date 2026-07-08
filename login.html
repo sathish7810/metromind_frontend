@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetroMind - Sign In</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="auth-header">
+      <div class="auth-logo">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+      </div>
+      <h1 class="auth-title">MetroMind Portal</h1>
+      <p class="auth-subtitle">Smart City Monitoring & Utility Analytics</p>
+    </div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter your username" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+      
+      <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+        Sign In
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Don't have an access key? <a href="register.html" class="auth-link">Request Account</a></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

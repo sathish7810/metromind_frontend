@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetroMind - Alert Notifications</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout-container">
+    <!-- Dynamic Sidebar injected here -->
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+      <header class="content-header">
+        <div class="header-title-area">
+          <h1>Notifications Hub</h1>
+          <p>Role-specific alerts, incident dispatch pings, and system status markers</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button id="btn-filter-unread" class="btn btn-primary btn-sm">Unread Only</button>
+          <button id="btn-filter-all" class="btn btn-secondary btn-sm">All Alerts</button>
+        </div>
+      </header>
+
+      <!-- Alerts List card -->
+      <section class="card" style="display: flex; flex-direction: column; gap: 20px; min-height: 50vh;">
+        <h2 class="stat-label">Notifications Inbox</h2>
+        <div id="alerts-inbox-list" class="alerts-list">
+          <p class="info-label" style="text-align: center; padding: 40px 0;">Loading alerts inbox...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="alerts.js"></script>
+</body>
+</html>

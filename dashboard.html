@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetroMind - Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout-container">
+    <!-- Dynamic Sidebar injected here -->
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+      <header class="content-header">
+        <div class="header-title-area">
+          <h1>City Overview</h1>
+          <p>Real-time analytics and system-wide operation status</p>
+        </div>
+      </header>
+
+      <!-- Stats Grid Counters -->
+      <section class="stats-grid">
+        <div class="card stat-card blue">
+          <div class="stat-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <div class="stat-info">
+            <span id="stat-incidents" class="stat-value">0</span>
+            <span class="stat-label">Total Incidents</span>
+          </div>
+        </div>
+
+        <div class="card stat-card red">
+          <div class="stat-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          </div>
+          <div class="stat-info">
+            <span id="stat-outages" class="stat-value">0</span>
+            <span class="stat-label">Active Outages</span>
+          </div>
+        </div>
+
+        <div class="card stat-card orange">
+          <div class="stat-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+          </div>
+          <div class="stat-info">
+            <span id="stat-zones" class="stat-value">0</span>
+            <span class="stat-label">Congested Zones</span>
+          </div>
+        </div>
+
+        <div class="card stat-card green">
+          <div class="stat-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M18 17H6v-2h12v2zm0-4H6v-2h12v2zm0-4H6V7h12v2z"/></svg>
+          </div>
+          <div class="stat-info">
+            <span id="stat-alerts" class="stat-value">0</span>
+            <span class="stat-label">Critical Alerts</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Split Analytics Layout -->
+      <div class="dashboard-layout">
+        <!-- Visual metrics card -->
+        <section class="card">
+          <h2 class="stat-label" style="margin-bottom: 12px;">Operational Metrics Distribution</h2>
+          <p class="info-label">Comparative chart of active traffic incidents, utilities issues, congestion zones, and severe alerts.</p>
+          
+          <div class="chart-container">
+            <div class="chart-bar-wrapper">
+              <div id="bar-incidents" class="chart-bar" style="height: 0%;"></div>
+              <span class="chart-label">Incidents</span>
+            </div>
+            <div class="chart-bar-wrapper">
+              <div id="bar-outages" class="chart-bar" style="height: 0%;"></div>
+              <span class="chart-label">Outages</span>
+            </div>
+            <div class="chart-bar-wrapper">
+              <div id="bar-zones" class="chart-bar" style="height: 0%;"></div>
+              <span class="chart-label">Congested Zones</span>
+            </div>
+            <div class="chart-bar-wrapper">
+              <div id="bar-alerts" class="chart-bar" style="height: 0%;"></div>
+              <span class="chart-label">Critical Alerts</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Unread Admin Alerts Sidebar -->
+        <section class="card" style="display: flex; flex-direction: column; gap: 16px;">
+          <h2 class="stat-label">Latest Actionable Alerts</h2>
+          <div id="dashboard-alerts" class="alerts-list" style="font-size: 0.9rem;">
+            <!-- Dynamic alerts loaded here -->
+            <p class="info-label" style="text-align: center; padding: 20px 0;">No active alerts matching your level.</p>
+          </div>
+          <a href="alerts.html" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center; margin-top: auto;">
+            Go to Alerts Inbox
+          </a>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
